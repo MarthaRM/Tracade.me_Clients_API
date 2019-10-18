@@ -17,11 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });*/
 
-
-/*   Route::post('login', 'AuthController@login');*/
-    Route::post('login', function (){
-        return "HOla";
-    });
+    Route::post('login', 'AuthController@login');
     Route::post('signup', 'AuthController@signup');
 
     Route::group([
