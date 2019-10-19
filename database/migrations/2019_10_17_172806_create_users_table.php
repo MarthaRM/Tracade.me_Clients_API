@@ -21,6 +21,13 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->string('adm_apellido_paterno', 50);
+            $table->string('adm_apellido_materno', 50);
+            $table->string('adm_metodo_de_pago', 100);
+
+            $table->unsignedBigInteger('aca_id');
+            $table->foreign('aca_id')->references('aca_id')->on('academia');
         });
     }
 
