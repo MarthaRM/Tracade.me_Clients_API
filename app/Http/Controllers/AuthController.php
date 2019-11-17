@@ -31,7 +31,7 @@ class AuthController extends Controller
             'email'    => $request->email,
             'adm_apellido_paterno' => $request->adm_apellido_paterno,
             'adm_apellido_materno' => $request->adm_apellido_materno,
-            'aca_id' => 1,
+            'aca_id' => $request->aca_id,
             'password' => bcrypt($request->password),
         ]);
 
