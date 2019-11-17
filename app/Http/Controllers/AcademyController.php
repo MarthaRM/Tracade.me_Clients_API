@@ -13,7 +13,7 @@ class AcademyController extends Controller
             'aca_status' => $request->aca_status,
             'aca_num_alumnos' => $request->aca_num_alumnos,
             'aca_fecha_corte' => $request->aca_fecha_corte,
-            'aca_adeudo' => $request->aca_fecha_corte,
+            'aca_adeudo' => $request->aca_adeudo,
             'pla_id' => $request->pla_id,
         ]);
         $academy->save();
