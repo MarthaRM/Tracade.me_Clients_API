@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Auth;
 use Validator;
 class AuthController extends Controller
 {
+    public function test(){
+        return "Bonjour!";
+    }
 
     public function signup(Request $request)
     {
