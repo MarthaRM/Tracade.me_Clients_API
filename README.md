@@ -31,6 +31,8 @@ X-Requested-With: XMLHttpRequest
 ##### Create
 Ruta: *register-plan*
 
+Método: Post
+
 Json:
 ```json
 {
@@ -48,6 +50,8 @@ Json:
 ### Academia
 ##### Create
 Ruta: *register-academy*
+
+Método: Post
 
 Json:
 ```json
@@ -68,6 +72,8 @@ Json:
 ##### Create
 Ruta: *signup*
 
+Método: Post
+
 Json:
 ```json
 {
@@ -80,13 +86,27 @@ Json:
     "adm_metodo_de_pago": "metodo"
 } 
 ```
-##### Read
+##### Login
+Ruta: *login*
+
+Método: Post
+
+Json:
+```json
+{
+    "email": "example@mail.com",
+    "password": "password",
+    "remember_me": "true"
+} 
+```
 ##### Update
 ##### Delete
 
 ### Pago
 ##### Create
 Ruta: *register-payment*
+
+Método: Post
 
 Json:
 ```json
