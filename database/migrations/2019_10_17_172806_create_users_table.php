@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             //$table->string('adm_metodo_de_pago', 100);
 
             $table->unsignedBigInteger('aca_id');
-            $table->foreign('aca_id')->references('aca_id')->on('academia');
+            $table->foreign('aca_id')->references('id')->on('academia');
         });
     }
 

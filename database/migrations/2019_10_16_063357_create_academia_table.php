@@ -14,7 +14,7 @@ class CreateAcademiaTable extends Migration
     public function up()
     {
         Schema::create('academia', function (Blueprint $table) {
-            $table->bigIncrements('aca_id');
+            $table->bigIncrements('id');
             $table->string('aca_nombre', 100);
             $table->string('aca_status', 50);
             $table->integer('aca_num_alumnos');
@@ -22,7 +22,7 @@ class CreateAcademiaTable extends Migration
             $table->decimal('aca_adeudo');
 
             $table->unsignedBigInteger('pla_id');
-            $table->foreign('pla_id')->references('pla_id')->on('plan');
+            $table->foreign('pla_id')->references('id')->on('plan');
 
             $table->timestamps();
         });

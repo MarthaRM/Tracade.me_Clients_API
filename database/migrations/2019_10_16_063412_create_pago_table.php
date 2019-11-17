@@ -14,12 +14,12 @@ class CreatePagoTable extends Migration
     public function up()
     {
         Schema::create('pago', function (Blueprint $table) {
-            $table->bigIncrements('pag_id');
+            $table->bigIncrements('id');
             $table->timestamp('pag_fecha');
             $table->decimal('pag_cantidad');
 
             $table->unsignedBigInteger('aca_id');
-            $table->foreign('aca_id')->references('aca_id')->on('academia');
+            $table->foreign('aca_id')->references('id')->on('academia');
 
             $table->timestamps();
         });

@@ -14,7 +14,7 @@ class CreatePlanTable extends Migration
     public function up()
     {
         Schema::create('plan', function (Blueprint $table) {
-            $table->bigIncrements('pla_id');
+            $table->bigIncrements('id');
             $table->string('pla_nombre', 50);
 
             /* pla_tipo_plan: estandar o personalizado, para diferenciar entre

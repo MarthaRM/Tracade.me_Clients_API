@@ -14,7 +14,7 @@ class CreateAdministradorTable extends Migration
     public function up()
     {
         Schema::create('administrador', function (Blueprint $table) {
-            $table->bigIncrements('adm_id');
+            $table->bigIncrements('id');
             $table->string('adm_nombre', 50);
             $table->string('adm_apellido_paterno', 50);
             $table->string('adm_apellido_materno', 50);
@@ -23,7 +23,7 @@ class CreateAdministradorTable extends Migration
             $table->string('adm_correo_electronico')->unique();
 
             $table->unsignedBigInteger('aca_id');
-            $table->foreign('aca_id')->references('aca_id')->on('academia');
+            $table->foreign('aca_id')->references('id')->on('academia');
 
             /* campo por default de 'users' de laravel */
             $table->timestamp('email_verified_at')->nullable();
