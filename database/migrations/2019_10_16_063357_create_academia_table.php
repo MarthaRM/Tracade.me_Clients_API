@@ -18,7 +18,7 @@ class CreateAcademiaTable extends Migration
             $table->string('aca_nombre', 100);
             $table->string('aca_status', 50);
             $table->integer('aca_num_alumnos');
-            $table->timestamp('aca_fecha_corte');
+            $table->date('aca_fecha_corte');
             $table->decimal('aca_adeudo');
 
             $table->unsignedBigInteger('pla_id');
