@@ -12,9 +12,9 @@ class AcademyController extends Controller
             'aca_nombre' => $request->aca_nombre,
             'aca_status' => $request->aca_status,
             'aca_num_alumnos' => $request->aca_num_alumnos,
-            'aca_fecha_corte' => $request->fecha_corte,
-            'aca_adeudo' => 5000,
-            'pla_id' => 1,
+            'aca_fecha_corte' => $request->aca_fecha_corte,
+            'aca_adeudo' => $request->aca_fecha_corte,
+            'pla_id' => $request->pla_id,
         ]);
         $academy->save();
         return response()->json([
