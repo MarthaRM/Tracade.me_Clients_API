@@ -17,7 +17,7 @@ class AuthController extends Controller
 
     public function signup(Request $request)
     {
-        dd($request);
+
         $request->validate([
             'name'     => 'required|string',
             'adm_apellido_paterno' => 'required|string',
@@ -43,6 +43,7 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
+        dd($request);
         $request->validate([
             'email'       => 'required|string|email',
             'password'    => 'required|string',
