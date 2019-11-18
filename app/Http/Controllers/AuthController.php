@@ -37,7 +37,9 @@ class AuthController extends Controller
 
         $user->save();
         return response()->json([
-            'message' => 'Successfully created user!'], 201);
+            'message' => 'Successfully created user!'], 201)->header('Access-Control-Allow-Origin', '*')
+            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+            ->header('Access-Control-Allow-Headers', 'x-requested-with, Content-Type, X-Token-Auth, Authorization');
     }
     public function login(Request $request)
     {
