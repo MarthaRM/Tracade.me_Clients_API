@@ -43,7 +43,7 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
-        dd($request);
+        dd($request->email, $request->password);
         $request->validate([
             'email'       => 'required|string|email',
             'password'    => 'required|string',
